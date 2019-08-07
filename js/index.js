@@ -81,13 +81,20 @@ window.addEventListener('resize', ()=>{
 // dbclick
 const logo = document.querySelector('h1');
 logo.addEventListener('dblclick', (e)=>{
-    e.target.textContent = 'Haha Bus';
+    e.target.textContent = 'Welcome everyone!';
     e.stopPropagation();
 })
 
 // change
-const contentP1 = document.querySelector('.text-content p');
-contentP1.addEventListener('cut', (e) =>{
-    alert('You cut text!');
-    e.stopPropagation();
+// const contentP1 = document.querySelector('.text-content p');
+// contentP1.addEventListener('cut', (e) =>{
+//     alert('You cut text!');
+//     e.stopPropagation();
+// })
+
+// search
+const search = document.getElementById('myInput');
+const demo = document.getElementById('demo');
+search.addEventListener('search', e=>{
+    demo.innerText = "You're searching for:" + search.nodeValue;
 })
